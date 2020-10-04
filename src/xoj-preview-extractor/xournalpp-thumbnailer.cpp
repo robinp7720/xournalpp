@@ -102,9 +102,6 @@ int main(int argc, char* argv[]) {
     gsize dataLen = 0;
     unsigned char* imageData = extractor.getData(dataLen);
 
-    // The following code is for rendering the Xournal++ icon on top of thumbnails.
-
-    // Cairo was unable to load the image, so fallback to writing the PNG data to disk.
     FILE* fp = fopen(argv[2], "wb");
     if (!fp) {
         logMessage((_F("xoj-preview-extractor: opening output file \"{1}\" failed") % argv[2]).str(), true);
