@@ -3,7 +3,7 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <requires lib="libhandy" version="1.0"/>
-  <object class="GtkApplicationWindow">
+  <object class="GtkApplicationWindow" id="settingsDialog">
     <property name="can-focus">False</property>
     <property name="modal">True</property>
     <property name="window-position">center</property>
@@ -247,6 +247,18 @@
       </object>
     </child>
   </object>
+  <object class="GtkSizeGroup">
+    <widgets>
+      <widget name="header_separator"/>
+      <widget name="panel_separator"/>
+    </widgets>
+  </object>
+  <object class="GtkSizeGroup">
+    <widgets>
+      <widget name="panel_headerbar"/>
+      <widget name="stack"/>
+    </widgets>
+  </object>
   <object class="HdyHeaderGroup">
     <property name="decorate-all" bind-source="main_leaflet" bind-property="folded" bind-flags="sync-create">False</property>
     <headerbars>
@@ -258,18 +270,6 @@
     <widgets>
       <widget name="header"/>
       <widget name="sidebar_box"/>
-    </widgets>
-  </object>
-  <object class="GtkSizeGroup">
-    <widgets>
-      <widget name="header_separator"/>
-      <widget name="panel_separator"/>
-    </widgets>
-  </object>
-  <object class="GtkSizeGroup">
-    <widgets>
-      <widget name="panel_headerbar"/>
-      <widget name="stack"/>
     </widgets>
   </object>
   <object class="GtkSizeGroup" id="header_sizegroup">

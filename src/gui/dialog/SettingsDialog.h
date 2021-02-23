@@ -70,7 +70,6 @@ private:
 private:
     Settings* settings = nullptr;
     Control* control = nullptr;
-    GtkWidget* callib = nullptr;
     int dpi = 72;
     vector<DeviceInfo> audioInputDevices;
     vector<DeviceInfo> audioOutputDevices;
@@ -78,6 +77,4 @@ private:
     std::unique_ptr<LanguageConfigGui> languageConfig;
     vector<ButtonConfigGui*> buttonConfigs;
     vector<DeviceClassConfigGui*> deviceClassConfigs;
-
-    LatexSettingsPanel latexPanel;
 };
