@@ -15,6 +15,7 @@
 #include <vector>
 
 #include <gtk/gtk.h>
+#include <handy.h>
 
 #include "XournalType.h"
 

@@ -97,9 +97,17 @@ add_definitions (-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_32)
 add_includes_ldflags ("${Glib_LDFLAGS}" "${Glib_INCLUDE_DIRS}")
 
 # GTK+
-pkg_check_modules (GTK REQUIRED "gtk+-3.0 >= 3.18.9")
-add_definitions (-DGDK_VERSION_MIN_REQUIRED=GDK_VERSION_3_18)
+pkg_check_modules (GTK REQUIRED "gtk+-3.0 >= 3.24")
+add_definitions (-DGDK_VERSION_MIN_REQUIRED=GDK_VERSION_3_24)
 add_includes_ldflags ("${GTK_LDFLAGS}" "${GTK_INCLUDE_DIRS}")
+message(GTK dir: ${GTK_INCLUDE_DIRS})
+
+
+# Libhandy
+pkg_check_modules (LIBHANDY REQUIRED "libhandy-1 >= 1.0")
+add_includes_ldflags ("${LIBHANDY_LDFLAGS}" "${LIBHANDY_INCLUDE_DIRS}")
+
+message(Libhandy dir: ${LIBHANDY_INCLUDE_DIRS})
 
 # GThread
 pkg_check_modules (GThread REQUIRED "gthread-2.0 >= 2.4.0")

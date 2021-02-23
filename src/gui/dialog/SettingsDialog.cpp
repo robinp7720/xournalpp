@@ -13,7 +13,7 @@
 #include "i18n.h"
 
 SettingsDialog::SettingsDialog(GladeSearchpath* gladeSearchPath, Settings* settings, Control* control):
-        GladeGui(gladeSearchPath, "settings.glade", "settingsDialog"),
+        GladeGui(gladeSearchPath, "settings/settings.ui", "settingsDialog"),
         settings(settings),
         control(control),
         callib(zoomcallib_new()),
